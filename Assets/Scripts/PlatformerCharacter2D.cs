@@ -20,7 +20,8 @@ namespace UnityStandardAssets._2D
         //private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-        
+
+        private int keys = 0;
 
         private int score = 0;
         public Text scoreText;
@@ -33,6 +34,9 @@ namespace UnityStandardAssets._2D
 
         void Start()
         {
+            UpdateScoreText();
+            timer = 0.0f;
+            minutes = 0;
         }
 
         private void Awake()
@@ -57,10 +61,10 @@ namespace UnityStandardAssets._2D
             }
 
             //m_Anim.SetBool("Ground", m_Grounded);
-            m_Rigidbody2D.rotation = 0;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             // Set the vertical animation
             //m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-            //UpdateTimer();
+            UpdateTimer();
 
         }
 
@@ -107,20 +111,19 @@ namespace UnityStandardAssets._2D
         }
 
 
-        /*void OnTriggerEnter2D(Collider2D other)
+        void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("PickUp"))
             {
                 other.gameObject.SetActive(false);
-                score++;
-                Debug.Log(score);
+                keys++;
                 UpdateScoreText();
             }
-        }*/
+        }
 
         void UpdateScoreText()
         {
-            scoreText.text = "Score: " + score.ToString();
+            //scoreText.text = "Keys: " + keys.ToString();
         }
 
         void UpdateTimer()
@@ -137,7 +140,7 @@ namespace UnityStandardAssets._2D
                 minString = "0" + (minutes.ToString());
             else
                 minString = minutes.ToString();
-            timerText.text = minString + ":" + secString;
+            //timerText.text = minString + ":" + secString;
         }
     }
 }

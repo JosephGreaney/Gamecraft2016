@@ -73,8 +73,11 @@
     <Compile Include="Assets\Scripts\CrossPlatformInput\TiltInput.cs" />
     <Compile Include="Assets\Scripts\CrossPlatformInput\TouchPad.cs" />
     <Compile Include="Assets\Scripts\CrossPlatformInput\VirtualInput.cs" />
+    <Compile Include="Assets\Scripts\EnemyRabbit.cs" />
+    <Compile Include="Assets\Scripts\OnDeathBox.cs" />
     <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
+    <Compile Include="Assets\Scripts\Ring.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
