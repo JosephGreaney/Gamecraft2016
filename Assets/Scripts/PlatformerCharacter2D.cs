@@ -16,15 +16,11 @@ namespace UnityStandardAssets._2D
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
-        //private Transform m_CeilingCheck;   // A position marking where to check for ceilings
-        //private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
         private int keys = 0;
 
-        private int score = 0;
-        public Text scoreText;
         public Text timerText;
         private float timer;
         private int seconds;
@@ -34,7 +30,6 @@ namespace UnityStandardAssets._2D
 
         void Start()
         {
-            UpdateScoreText();
             timer = 0.0f;
             minutes = 0;
         }
@@ -43,8 +38,6 @@ namespace UnityStandardAssets._2D
         {
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
-            //m_CeilingCheck = transform.Find("CeilingCheck");
-            //m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
@@ -60,11 +53,13 @@ namespace UnityStandardAssets._2D
                     m_Grounded = true;
             }
 
-            //m_Anim.SetBool("Ground", m_Grounded);
             transform.rotation = Quaternion.Euler(0, 0, 0);
-            // Set the vertical animation
-            //m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             UpdateTimer();
+
+            if(m_Grounded)
+            {
+                makeJump(); //Always jumping when we can
+            }
 
         }
 
@@ -80,10 +75,7 @@ namespace UnityStandardAssets._2D
             // If the player should jump...
             if (m_Grounded && jump) // && m_Anim.GetBool("Ground")
             {
-                // Add a vertical force to the player.
-                m_Grounded = false;
-                //m_Anim.SetBool("Ground", false);
-			    m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce));
+                makeJump();
             }
             if (move > 0 && !m_FacingRight)
             {
@@ -117,13 +109,7 @@ namespace UnityStandardAssets._2D
             {
                 other.gameObject.SetActive(false);
                 keys++;
-                UpdateScoreText();
             }
-        }
-
-        void UpdateScoreText()
-        {
-            //scoreText.text = "Keys: " + keys.ToString();
         }
 
         void UpdateTimer()
@@ -141,6 +127,14 @@ namespace UnityStandardAssets._2D
             else
                 minString = minutes.ToString();
             //timerText.text = minString + ":" + secString;
+        }
+
+        void makeJump()
+        {
+            // Add a vertical force to the player.
+            m_Grounded = false;
+            //m_Anim.SetBool("Ground", false);
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
     }
 }

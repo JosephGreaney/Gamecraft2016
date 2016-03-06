@@ -74,7 +74,9 @@
     <Compile Include="Assets\Scripts\CrossPlatformInput\TouchPad.cs" />
     <Compile Include="Assets\Scripts\CrossPlatformInput\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\EnemyRabbit.cs" />
+    <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\OnDeathBox.cs" />
+    <Compile Include="Assets\Scripts\OnWinBox.cs" />
     <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\Ring.cs" />
