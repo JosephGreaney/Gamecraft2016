@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamecraft2016.CSharp", "Gamecraft2016.CSharp.csproj", "{F06B21FD-B496-82D6-8E37-A5E4486FB016}"
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamecraft2016", "Gamecraft2016.csproj", "{4A7B3E69-4745-D699-95F2-EBE7F7B21A03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamecraft2016.CSharp.Editor", "Gamecraft2016.CSharp.Editor.csproj", "{38B53783-8FD5-25DA-D496-44471F4E5CD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamecraft2016.Editor", "Gamecraft2016.Editor.csproj", "{6796CF61-310F-1040-1B1E-41812FF025C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F06B21FD-B496-82D6-8E37-A5E4486FB016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F06B21FD-B496-82D6-8E37-A5E4486FB016}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F06B21FD-B496-82D6-8E37-A5E4486FB016}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F06B21FD-B496-82D6-8E37-A5E4486FB016}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38B53783-8FD5-25DA-D496-44471F4E5CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38B53783-8FD5-25DA-D496-44471F4E5CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38B53783-8FD5-25DA-D496-44471F4E5CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38B53783-8FD5-25DA-D496-44471F4E5CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A7B3E69-4745-D699-95F2-EBE7F7B21A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7B3E69-4745-D699-95F2-EBE7F7B21A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7B3E69-4745-D699-95F2-EBE7F7B21A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7B3E69-4745-D699-95F2-EBE7F7B21A03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6796CF61-310F-1040-1B1E-41812FF025C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6796CF61-310F-1040-1B1E-41812FF025C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6796CF61-310F-1040-1B1E-41812FF025C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6796CF61-310F-1040-1B1E-41812FF025C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

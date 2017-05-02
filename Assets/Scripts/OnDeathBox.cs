@@ -19,7 +19,7 @@ public class OnDeathBox : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
         
 		if (coll.gameObject.tag == "Player") {
-            SceneManager.LoadScene("TestScene");
+            Globals.RestartLevel();
         }
 	}
 }
